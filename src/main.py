@@ -19,8 +19,8 @@ skip_domain = []
 def gmail_auth():
     creds = None
     # Token file stores the user's access and refresh tokens
-    if os.path.exists('token.pickle'):
-        with open('token.pickle', 'rb') as token_file:
+    if os.path.exists('../credentials/token.pickle'):
+        with open('../credentials/token.pickle', 'rb') as token_file:
             creds = pickle.load(token_file)
 
     # If no valid credentials available, let user log in.
@@ -28,11 +28,11 @@ def gmail_auth():
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file('../credentials/credentials.json', SCOPES)
             creds = flow.run_local_server(port=0)
 
         # Save the credentials for next run
-        with open('token.pickle', 'wb') as token_file:
+        with open('../credentials/token.pickle', 'wb') as token_file:
             pickle.dump(creds, token_file)
 
     service = build('gmail', 'v1', credentials=creds)
