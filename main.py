@@ -13,7 +13,7 @@ api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
-skip_domain = ['@vanderbilt.edu']
+skip_domain = []
 
 
 def gmail_auth():
