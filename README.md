@@ -111,9 +111,9 @@ What it does:
 
 1. You can reuse the same `credentials.json` file.
 2. During auth, choose the second Gmail account.
-3. A new `token.json` will be generated automatically.
+3. A new `token.pickle` will be generated automatically.
 
-To support multiple accounts simultaneously, you’ll need to manage token files separately (e.g., `token_alice.json`, `token_bob.json`) and pass them dynamically to your script.
+To support multiple accounts simultaneously, you’ll need to manage token files separately (e.g., `token_alice.pickle`, `token_bob.pickle`) and pass them dynamically to your script.
 
 ---
 
