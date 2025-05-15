@@ -65,7 +65,7 @@ Classify the following email text into one of these categories:
 Email:
 {text}
 
-Respond with just one of the three categories.
+Respond with just one of the four categories.
 """
     model = genai.GenerativeModel('gemini-2.0-flash')
     response = model.generate_content(prompt)
