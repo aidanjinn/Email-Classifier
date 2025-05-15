@@ -122,7 +122,7 @@ To support multiple accounts simultaneously, you’ll need to manage token files
 If you want to re-authenticate or switch users:
 
 ```bash
-rm token.json
+rm token.pickle
 ```
 
 Then re-run the script and follow the new auth flow.
