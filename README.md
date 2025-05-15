@@ -58,7 +58,7 @@ pip install -r requirements.txt
 4. Go to *APIs & Services → Credentials*
 5. Click "Create Credentials" → Choose **OAuth client ID**
 6. Select **Desktop App** and name it.
-7. Download the `credentials.json` file and place it in your project root.
+7. Download the `credentials.json` file and place it in the credentials folder within the project.
 
 💡 On first run, you’ll be prompted to authenticate and allow Gmail access. A `token.json` will be saved for reuse.
 
